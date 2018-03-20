@@ -71,8 +71,16 @@ https://gist.githubusercontent.com/homjxi0e/0d683007bd4a3ce39d3e19342aaa68ec/raw
 ```
  msiexec.exe C:\testing.msi 
  &- File MSI Hello World Exe in .MSI 
- 
- 
 
 ```
 
+Product @bohops
+---------------
+( 11 ) HTA Launch Execution ( url.dll ) 
+```
+Rundll32.exe url.dll,OpenURL FileHTA Or Anything 
+```
+( 12 ) SCT Launch Execution InSide INFScript ( ieadvpack.dll )  
+```
+rundll32.exe ieadvpack.dll,LaunchINFSection test.inf,,1, 
+```
