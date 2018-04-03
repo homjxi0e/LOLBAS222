@@ -154,3 +154,7 @@ rundll32.exe shdocvw.dll, OpenURL <path to local URL file>
 ```
 rundll32.exe ieframe.dll, OpenURL <path to local URL file>
 ```
+( 21 ) Commandline Execute Via  Vshadow.exe
+```
+ Vshadow exec calc.exe
+ ```
