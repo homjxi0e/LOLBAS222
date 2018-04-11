@@ -87,7 +87,11 @@ mshta.exe VBScript:Close(Execute("Set S=CreateObject(""WScript.Shell""):If S.App
 https://gist.githubusercontent.com/homjxi0e/eb16d75f3db6d6081648f2c5c5c98c3b/raw/0870f7553095dcf6519f93c1cf72c6415468140b/VBSExC
 ```
 
+( 10v3 ) forfiles.exe Execution Endless 
+```
+forfiles.exe /c calc.exe
 
+```
 
 
 (Note) Product Via @bohops 
