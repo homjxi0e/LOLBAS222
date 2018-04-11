@@ -158,3 +158,11 @@ rundll32.exe ieframe.dll, OpenURL <path to local URL file>
 ```
  Vshadow exec calc.exe
  ```
+ 
+ ( 23 ) CSharp Execution Via ProjectInstance RA Powershell
+ ```
+ [Reflection.Assembly]::LoadWithPartialName('Microsoft.Build')
+$p="c:\test\test.csproj"
+$e=new-object Microsoft.Build.Execution.ProjectInstance($p)
+$e.build()
+```
