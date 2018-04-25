@@ -108,6 +108,11 @@ ScriptRunner.exe -appvscript C:\Windows\System32\calc.exe
  &- link file PCW8E57.xml
  https://gist.github.com/homjxi0e/3f35212db81b9375b7906031a40c6d87
 ```
+( 10v7 ) Launch MSI Pacakge Execution Powershell
+```
+install-Package C:\test.msi
+https://github.com/homjxi0e/MSIScript/blob/master/Exec-Execute.msi
+```
 
 (Note) Product Via @bohops 
 
